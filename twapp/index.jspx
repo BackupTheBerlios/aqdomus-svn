@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-  xmlns:c="http://java.sun.com/jstl/core"
-  xmlns:tl="http://aquila-deus.no-ip.org/taglibs/twapp"
-  xmlns:tf="urn:jsptagdir:/WEB-INF/tags">
+          xmlns:c="http://java.sun.com/jstl/core"
+          xmlns:tl="http://aquila-deus.no-ip.org/taglibs/twapp"
+          xmlns:tf="urn:jsptagdir:/WEB-INF/tags">
   <jsp:directive.page session="false"/>
   <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
