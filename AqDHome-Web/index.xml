@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<webui:page xmlns:webui="http://aqdhome.sourceforge.net/webui"
+  css="index" description="Welcome to AqDHome!">
+
+  <webui:front>
+
+    <webui:front-intro>
+      <img src="http://sourceforge.net/sflogo.php?group_id=125332&amp;type=6"
+        width="315px" height="93px"
+        style="filter: alpha(opacity=25); opacity: 0.25; -moz-opacity: 0.25;"
+        onclick="window.location = 'http://sourceforge.net/'"/>
+    </webui:front-intro>
+
+    <webui:front-menu title="Menu">
+      <item name="Project Page"
+        link="http://sourceforge.net/projects/aqdhome/">
+        Project Page at SourceForge
+      </item>
+      <item name="CVS Repository"
+        link="http://cvs.sourceforge.net/viewcvs.py/aqdhome/">
+        Code Repository and Histroy
+      </item>
+      <item name="Technical Articles"
+        link="articles.xml">
+        Mostly Windows NT/XP Tips
+      </item>
+      <item name="Mirror Site"
+        link="http://www.aquila-deus.no-ip.org/AqDHome-Web/index.xml">
+        Mirror Site and Live Demos (not yet)
+      </item>
+    </webui:front-menu>
+
+    <webui:front-code>
+      <item name="[UnnamedSearch] Design"
+        link="code-AqDHome.UnnamedSearch.xml">
+        Our university project - A distributed and intelligent web search
+        engine. It will become an independent project later.
+      </item>
+      <item name="AqDHome.DatabaseArray"
+        link="code-AqDHome.DatabaseArray.xml">
+        RAID0-like array system for RDBMS. It's to provide fast access to
+        document metadata and index cache (for UnnamedSearch).
+      </item>
+      <item name="AqDHome.ServiceHost"
+        link="code-AqDHome.ServiceHost.xml">
+        .NET service host, a powerful platform to host and manage persistent
+        services and remote objects (for UnnamedSearch).
+      </item>
+    </webui:front-code>
+
+  </webui:front>
+
+</webui:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="code.xsl"?>
+<webui:page xmlns:webui="http://aqdhome.sourceforge.net/webui"
+  css="code" description="AqDHome.DatabaseArray">
+  <webui:code-frame menu="" linkbase="AqDHome.DatabaseArray">
+  </webui:code-frame>
+</webui:page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="article.xsl"?>
+<webui:page xmlns:webui="http://aqdhome.sourceforge.net/webui"
+  css="article" description="Technical Articles">
+
+  <webui:articles>
+
+    <webui:at-head name="Windows XP Tweaking">
+    </webui:at-head>
+
+    <webui:at-content id="IIS_Conn" name="IIS Maximum Connection Tweaking">
+      In console, type:
+      <code>
+        cd C:\inetpub\adminscripts<br/>
+        cscript adsutil.vbs set w3svc/MaxConnections 40<br/>
+        iisreset<br/>
+      </code>
+      40 is the maximum connection allowed, the default value on xp professional
+      is 10.
+    </webui:at-content>
+
+    <webui:at-content id="IIS_Conn2" name="2IIS Maximum Connection Tweaking">
+      In console, type:
+      <code>
+        cd C:\inetpub\adminscripts<br/>
+        cscript adsutil.vbs set w3svc/MaxConnections 40<br/>
+        iisreset<br/>
+      </code>
+      40 is the maximum connection allowed, the default value on xp professional
+      is 10.
+    </webui:at-content>
+
+  </webui:articles>
+
+</webui:page>

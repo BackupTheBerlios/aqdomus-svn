@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="code.xsl"?>
+<webui:page xmlns:webui="http://aqdhome.sourceforge.net/webui"
+  css="code" description="AqDHome.ServiceHost">
+  <webui:code-frame menu="userguide" linkbase="AqDHome.ServiceHost">
+    <webui:para>
+      <webui:code-head>INSTALLATION: (without setup)</webui:code-head>
+      <webui:ol>
+        <webui:li-p>
+          Unzip and extract <code>bin\AqDHome.ServiceHost.exe</code> to any
+          directory, for example, <code>C:\Program Files\AqDHome</code>
+        </webui:li-p>
+        <webui:li-p>
+          Run: <code>InstallUtil.exe AqDHome.ServiceHost.exe</code>
+        </webui:li-p>
+        <webui:li-p>
+          Run <code>services.msc</code> and start <em>AqDHome.ServiceHost</em>
+          <br/>
+          -- OR --
+          <br/>
+          Run <code>net start AqDHome.ServiceHost</code>
+        </webui:li-p>
+        <webui:li-p>
+          Uninstall: <code>InstallUtil.exe /u AqDHome.ServiceHost.exe</code>
+        </webui:li-p>
+      </webui:ol>
+    </webui:para>
+    <webui:para>
+      <webui:code-head>CONFIGURATION:</webui:code-head>
+      <webui:para>
+        <em>(not yet implemented in code)</em>
+      </webui:para>
+    </webui:para>
+    <webui:para>
+      <webui:code-head>SERVICE PROGAMMING:</webui:code-head>
+      <webui:para>
+        Just code it like ordinary console applications, and:
+      </webui:para>
+      <webui:ul>
+        <webui:li-p>
+          Service assemblies must use "exe" as the file extension. And
+          dependent assemblies must use "dll". A service assembly may depend on
+          other service assemblies.
+        </webui:li-p>
+        <webui:li-p>
+          Side-By-Side assemblies are useless and will not be supported even in
+          the future. Just use different assembly names for incompatible
+          versions of assemblies.
+        </webui:li-p>
+        <webui:li-p>
+          Add event handler to AppDomain.Unload to perform cleanup operations.
+          It's raised when your service is stopped due to ServiceHost quit or
+          the UPDATE command.
+        </webui:li-p>
+      </webui:ul>
+    </webui:para>
+  </webui:code-frame>
+</webui:page>

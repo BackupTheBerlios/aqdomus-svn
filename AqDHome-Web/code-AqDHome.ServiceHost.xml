@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="code.xsl"?>
+<webui:page xmlns:webui="http://aqdhome.sourceforge.net/webui"
+  css="code" description="AqDHome.ServiceHost">
+  <webui:code-frame menu="" linkbase="AqDHome.ServiceHost">
+    <webui:para>
+      .NET service host, a powerful platform to host and manage persistent
+      services and remote objects.
+
+      The project is built for my university project - a distributed and
+      intelligent web search engine. However it's not a sub-project of the
+      search engine, because the platform will be useful for many other things
+      (to see examples, run your services.msc)
+    </webui:para>
+    <webui:para>
+      <webui:code-head>
+        Benefits over traditional windows services:
+      </webui:code-head>
+      <webui:ol>
+        <webui:li>
+          Easy to install/uninstall and update services:
+          <webui:para>
+            All your service assemblies and dependent assemblies need only to
+            be copied into a specified directory. And the uninstall procedure
+            is just to delete those service assemblies or move them to some
+            temporary directory (unused dependent assemblies are removed
+            automatically).
+          </webui:para>
+          <webui:para>
+            Update: When you make changes in the assembly directory (add/remove
+            services, etc), you have to tell the host to do a "UPDATE", then it
+            will shut down removed services, restart services whose assemblies
+            or dependent assemblies have been updated, and launch newly-added
+            services.
+          </webui:para>
+        </webui:li>
+        <webui:li-p>
+          Easy to manage: As you can see, there is almost nothing to configure
+          :)
+        </webui:li-p>
+        <webui:li-p>
+          Easy to test: Services are just normal console applications. You
+          could test them individually.
+        </webui:li-p>
+        <webui:li-p>
+          Less resource-hungry: All services are running on the same process,
+          inside their own AppDomain. It's not a sandbox, but able to prevent
+          one service from affecting others unintentionally.
+        </webui:li-p>
+        <webui:li-p>
+          Distributed Environment Support: The abstract assembly provider makes
+          it very easy to run services and load dependent assemblies from
+          remote file systems or memory. So that you may install all assemblies
+          on just one computer and use them everywhere!
+        </webui:li-p>
+      </webui:ol>
+    </webui:para>
+  </webui:code-frame>
+</webui:page>

@@ -1,0 +1,48 @@
+table.code {
+  width: 100%;
+}
+
+td.menu {
+  padding: 0px 20px 0px 20px;
+  text-align: right;
+  vertical-align: top;
+}
+
+td.content {
+  width: 100%;
+  padding: 10px 20px 0px 0px;
+  color: rgb(231, 231, 215);
+  font-family: Times New Roman;
+  font-size: 10pt;
+  vertical-align: top;
+}
+
+code {
+  white-space: nowrap;
+  font-family: Lucida Sans Typewriter, Bitstream Vera Sans Mono, Monospace;
+  font-size: 80%;
+}
+
+div.code-head {
+  font-family: Georgia, Lucida Bright, Lucida, Serif;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+ol.code-ol {
+  border-width: 0;
+  margin-left: 2em;
+  padding: 0;
+}
+
+ul.code-ul {
+  border-width: 0;
+  margin-left: 2em;
+  padding: 0;
+}
+
+li.code-li {
+  border-width: 0;
+  margin-left: 0;
+  padding: 0;
+}
