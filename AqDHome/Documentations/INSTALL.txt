@@ -1,0 +1,9 @@
+1.Prepare database
+
+  [more to add]
+
+
+2.Modify /web.config
+
+
+3.DONE!

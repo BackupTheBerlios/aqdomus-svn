@@ -1,0 +1,34 @@
+- Rather than putting contents in separated pages, the software uses a
+  Default.aspx to handle all requests, loading "EmPage" for specified content.
+
+  EmPages themselves are special kind of user controls derived from
+  "BaseEmPage". When an EmPage is loaded, its default stylesheet is also
+  automatically referenced.
+
+- BaseControl is the parent class of all User Controls. Its main goal is to
+  solve the hassle of embeddeding html code inside ASP.NET Custom Controls.
+  For examples, see BaseControl.cs
+
+  BaseControl can only be used in Default.aspx and EmPages
+
+- BasePage is the parent class for all dynamically-generated stylesheets
+  (.css.aspx) and javascript files (.js.aspx), which are used instead of
+  ordinary css and js to cope with the incompatibility between web browsers.
+
+- All files are put under a 2-level directory structure.
+
+    /bin              Store all DLLs. The directory should be set inaccessible.
+
+    /Documentations   Store all documentations
+
+    /StorageCode      Store code related to storage functions. Compiled to
+                      /bin/AqdHome.Storage.dll
+
+    /WebUICode        Store code common to all .ascx and .aspx. Complied to
+                      /bin/AqdHome.dll
+
+    /WebUIEmPages     Store all EmPages and their stylesheets.
+
+    /WebUIImages      Store all images.
+
+  The path to locate EmPages and images may be changed by modifying web.config
