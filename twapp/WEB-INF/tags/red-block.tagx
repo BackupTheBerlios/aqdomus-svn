@@ -1,0 +1,8 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page">
+  <jsp:directive.tag language="java"/>
+  <jsp:directive.attribute name="boldText" required="true" fragment="true"/>
+  <span style="background-color: rgb(255, 240, 232);">
+    <b><jsp:invoke fragment="boldText"/></b><br/>
+    <jsp:doBody/>
+  </span>
+</jsp:root>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:tl="http://aquila-deus.no-ip.org/taglibs/twapp"
+  xmlns:tf="urn:jsptagdir:/WEB-INF/tags">
+  <jsp:directive.page session="false"/>
+  <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title>Test</title>
+      <style type="text/css">
+        <![CDATA[
+        body
+        {
+        border-width: 0px;
+        margin: 0px;
+        padding: 0px;
+        }
+        ]]>
+      </style>
+    </head>
+
+    <body>
+      <h1 style="background: #ccddff">Hello!</h1>
+      <tf:red-block>
+        <jsp:attribute name="boldText">
+          Hell!
+          <c:out value="Yeee!"/>
+          <br/>
+        </jsp:attribute>
+        <jsp:body>
+          <c:out value="Congratulations, JSTL is working!"/><br/>
+        </jsp:body>
+      </tf:red-block>
+      <tl:piclist path="D:/FILES/IMAGE">
+        <jsp:attribute name="nameOut">
+          Ahhh!!
+        </jsp:attribute>
+        <jsp:body>
+          File: [${pictPath}]<br/>
+        </jsp:body>
+      </tl:piclist>
+    </body>
+
+  </html>
+
+</jsp:root>

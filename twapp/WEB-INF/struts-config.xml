@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+  <form-beans>
+    <form-bean name="myFormBean"
+      type="org.apache.struts.action.DynaActionForm"/>
+  </form-beans>
+
+  <action-mappings>
+    <action path="/sdemo.do" forward="/sdemo.jsp"/>
+    <action path="/sdemo-submit.do" name="myFormBean"
+      type="twapp." scope="request" input="input">
+      <forward name="input" path="/sdemo.do"/>
+      <forward name="success" path="/demo.jsp"/>
+    </action>
+  </action-mappings>
+
+</struts-config>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<taglib>
+
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.0</jsp-version>
+  <short-name>t</short-name>
+  <uri>http://aquila-deus.no-ip.org/taglibs/twapp</uri>
+
+  <tag>
+    <name>myTag</name>
+    <tag-class>twapp.MyTag</tag-class>
+    <body-content>scriptless</body-content>
+    <description>
+      Repeat the body.
+    </description>
+    <attribute>
+      <name>repeatTimes</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>lineBegin</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>javax.servlet.jsp.tagext.JspFragment</type>
+    </attribute>
+    <attribute>
+      <name>footer</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>javax.servlet.jsp.tagext.JspFragment</type>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>piclist</name>
+    <tag-class>twapp.PictureListingTag</tag-class>
+    <body-content>scriptless</body-content>
+    <description>
+      Given a path, this tag provides a list of the picture files in that path.
+    </description>
+    <attribute>
+      <name>path</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>nameOut</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>javax.servlet.jsp.tagext.JspFragment</type>
+    </attribute>
+  </tag>
+
+</taglib>

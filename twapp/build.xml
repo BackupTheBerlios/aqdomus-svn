@@ -1,0 +1,27 @@
+<project name='twapp' default='compile' basedir='.'>
+
+  <property name='classes' location='WEB-INF/classes'/>
+  <property name='src' location='WEB-INF/src'/>
+  <property name='tmp' location='WEB-INF/tmp'/>
+  <property name='work' location='WEB-INF/work'/>
+  <property name='dist' location='../twapp.war'/>
+
+  <target name='dist' depends='compile'>
+    <jar destfile='${dist}' basedir='.'
+      excludes='${src}/*, ${tmp}/*, ${work}/*'/>
+  </target>
+
+  <target name='compile'>
+    <mkdir dir='${classes}'/>
+    <javac srcdir='${src}' destdir='${classes}'/>
+    <copy todir='${classes}' overwrite='true'>
+      <fileset dir='${src}' excludes='**/*.java'/>
+    </copy>
+  </target>
+
+  <target name='clean'>
+    <delete file='${dist}'/>
+    <delete dir='${classes}'/>
+  </target>
+
+</project>
